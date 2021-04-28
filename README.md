@@ -9,7 +9,7 @@ An application that helps indoor plant lovers learn about their plant babies. It
 * Logged in users will be able to name plants, log recent care (last time watered, etc.)
 
 ## Wireframe
-[Google Sheets wireframe] (https://docs.google.com/presentation/d/1p2TwMATr68OSZBgdWnPdKguX4QUlaXm_1CfvG1-CHNU/edit#slide=id.gd5944b650e_0_22)
+[Google Sheets Wireframe](https://docs.google.com/presentation/d/1p2TwMATr68OSZBgdWnPdKguX4QUlaXm_1CfvG1-CHNU/edit#slide=id.gd5944b650e_0_22)
 
 ## Future Developments
 * Plant advice from grandma
