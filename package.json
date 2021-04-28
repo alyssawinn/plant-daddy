@@ -1,0 +1,29 @@
+{
+  "name": "plant-daddy",
+  "version": "1.0.0",
+  "description": "## Project Proposal An application that helps indoor plant lovers learn about their plant babies. It allows users to create an account and save information about the care of their plants.",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express-session": "^1.17.1",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alyssawinn/plant-daddy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alyssawinn/plant-daddy/issues"
+  },
+  "homepage": "https://github.com/alyssawinn/plant-daddy#readme"
+}
