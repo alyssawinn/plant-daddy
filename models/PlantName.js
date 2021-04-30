@@ -15,13 +15,34 @@ PlantName.init(
                 allowNull: false,
                 //validation?
             },
+            category_id: {
+                type: DataTypes.INTEGER,
+                references: {
+                    model: 'category',
+                    key: 'id'
+                }
+            },
+            water_id: {
+                type: DataTypes.INTEGER,
+                references: {
+                    model: 'water',
+                    key: 'id'
+                }
+            },
+            sunlight_id: {
+                type: DataTypes.INTEGER,
+                references: {
+                    model: 'sunlight',
+                    key: 'id'
+                }
+            }
         },
         {
             sequelize,
             timestamps: false,
             freezeTableName: true,
             underscored: true,
-            modelName: 'plant'
+            modelName: 'name'
         }
     );
 
