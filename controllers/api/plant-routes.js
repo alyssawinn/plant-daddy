@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { PlantName } = require('../../models');
+const { Plant } = require('../../models');
 
 router.get('/', (req, res) => {
 

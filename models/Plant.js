@@ -1,9 +1,9 @@
 const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
-class PlantName extends Model {}
+class Plant extends Model {}
 
-PlantName.init(
+Plant.init(
         {
             id: {
                 type: DataTypes.INTEGER,
@@ -15,6 +15,21 @@ PlantName.init(
                 allowNull: false,
                 //validation?
             },
+                waterAmount: {
+                    type: DataTypes.STRING,
+                    allowNull: false,
+                },
+                sunlightAmount: {
+                    type: DataTypes.STRING,
+                    allowNull: false,
+                },
+            user_id: {
+                type: DataTypes.INTEGER,
+                references: {
+                    model: 'user',
+                    key: 'id'
+                }
+            },
             category_id: {
                 type: DataTypes.INTEGER,
                 references: {
@@ -22,28 +37,14 @@ PlantName.init(
                     key: 'id'
                 }
             },
-            water_id: {
-                type: DataTypes.INTEGER,
-                references: {
-                    model: 'water',
-                    key: 'id'
-                }
-            },
-            sunlight_id: {
-                type: DataTypes.INTEGER,
-                references: {
-                    model: 'sunlight',
-                    key: 'id'
-                }
-            }
         },
         {
             sequelize,
             timestamps: false,
             freezeTableName: true,
             underscored: true,
-            modelName: 'name'
+            modelName: 'plant'
         }
     );
 
-    module.exports = PlantName;
+    module.exports = Plant;
