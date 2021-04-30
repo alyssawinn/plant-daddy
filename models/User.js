@@ -24,9 +24,21 @@ User.init(
       email: {
          type: DataTypes.STRING,
          allowNull: false,
+         unique: true,
+         validate: {
+            isEmail: true
+         }
+      },
+      password: {
+         type: DataTypes.STRING,
+         allowNull: false,
          validate: {
             len: [4]
          }
+      },
+      admin: {
+         type: DataTypes.BOOLEAN,
+         allowNull: false
       }
    },
    {
