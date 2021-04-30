@@ -1,16 +1,16 @@
-const { Model, Datatypes, DataTypes} = require('sequelize');
+const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Plant extends Model {}
+class PlantName extends Model {}
 
-    Plant.init(
+PlantName.init(
         {
             id: {
                 type: DataTypes.INTEGER,
                 primaryKey: true,
                 autoIncrememnt: true
             },
-            plantCatagory: {
+            name: {
                 type: DataTypes.STRING,
                 allowNull: false,
                 //validation?
@@ -25,4 +25,4 @@ class Plant extends Model {}
         }
     );
 
-    module.exports = Plant;
+    module.exports = PlantName;
