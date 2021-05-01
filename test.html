@@ -10,82 +10,78 @@
 </head>
 <body>
     <div class="wrapper background">
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Plant Daddy</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Search</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">My Plants</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Logout</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-        </header>
-        <br>
-        <br>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Plant Daddy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Search</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">My Plants</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Logout</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
 
-        <main class="container">
+        <main>
+        <div class="container">
           <div class="row">
-            <div class="col-md-3 mike1">
-              <h3 class="text-center">Search</h3>
-        <p class="text-center">Look your new plant babies up!</p>
-        <form class="text-center">
-          <label class="text-white" for="name">Name</label>
-          <input type="text" placeholder="Orchid" id="name" name="name" class="form-input" />
-          <br>
-          <br>
-          <label class="text-white" for="Description">Description</label>
-          <input type="text" placeholder="Big leaves" id="Description" name="Description" class="form-input" />
-          <br>
-          <br>
-          <label class="text-white" for="Difficulty">Difficulty</label>
-          <input type="text" placeholder="Easy/Already Dead" id="Difficulty " name="Difficulty " class="form-input" />
-          <br>
-          <br>
-          <button class="text-center" type="submit">
-            Go
-        </form>
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 search-bar">
+              <h1>Browse Plants</h1>
+                <form>
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" />
+                    <label for="category">Category</label>
+                    <select id="category" class="form-control">
+                      <option disabled selected></option>
+                      <option value="house-plants">House Plants</option>
+                      <option value="succulents">Succulents</option>
+                      <option value="orchids">Orchids</option>
+                      <option value="bonsai-trees">Bonsai Trees</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                  </div>
+                </form>
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-4 mike1">
-              <div class="col-md-6">
-        <h3>Login</h3>
-        <p>Create a profile to keep track of your plants and even name them!</p>
-        <form>
-          <label class="text-center" for="name">Username</label>
-          <input type="text" placeholder="Plant Daddy" id="name" name="name" class="form-input" />
-          <br>
-          
-          <label class="text-white" for="email">Email</label>
-          <input type="email" placeholder="Email" id="email" name="email" class="form-input" />
-          <br>
-          
-          <button type="submit">
-            Login
-        </form>
-      </div>
-      </div>
+            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 login-head">
+              <div class="login-section">
+                <h1>Sign up</h1>
+                <p>Create a profile to keep track of your plant babies</p>
+                <form>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" />
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="form-control" />
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" />
+                    <button type="submit" class="btn btn-primary">Let's grow ></button>
+                  </div>
+                </form>
+              </div>
             </div>
-            
+          </div>
+        </div>   
         </main>
+
         <footer>
             <div class="navbar fixed-bottom">
                 <p>We're rooting for you!</p>

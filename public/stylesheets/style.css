@@ -23,6 +23,16 @@ footer p {
     margin: .5rem auto;
 }
 
+.btn-primary {
+    background-color: #00611C !important;
+    border-color: #00611C !important;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: #fff !important;
+    color: #00611c !important;
+}
+
 .navbar {
     background-color: #00611C !important;
 }
@@ -55,24 +65,70 @@ footer p {
 .navbar-brand:hover {
     text-decoration: none;
 }
-/* you can remove these i just use them to see the columns and rows*/
-.mike1 {
-    text-align: right;
-    color: white;
-    width: 110px; height: 300px;
-   background-color: #A0DE21; 
-    -moz-border-radius: 100px 0px;
-    -webkit-border-radius: 100px 0px;
-    border-radius: 100px 0px;
-      
-}
-
-.mike2 {
-    border: 2px solid rgb(0, 0, 0);
-    background-color: darkgreen;
-    
-}
 
 .background {
-    background-image: url('https://images-na.ssl-images-amazon.com/images/I/71lFloOatLL._AC_SL1000_.jpg');
+    background: url('../../assets/images/homepage-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top right;
+}
+
+.container {
+    margin: 0 !important;
+}
+
+.search-bar {
+    background-color: #EADDCA;
+    height: 87vh;
+    padding-top: 20%;
+}
+
+.login-section {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #EEEEEE;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+.form-group > button {
+    margin-top: 10px !important;
+}
+
+@media screen and (max-width: 992px) {
+    .login-section {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    .background {
+        background: none;
+    }
+
+    .search-bar {
+        height: 43vh;
+        padding-top: 15%;
+    }
+
+    .login-section {
+        margin-top: initial;
+        margin-left: initial;
+        height: 43vh;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        padding-right: calc(var(--bs-gutter-x)/ 2);
+        padding-left: calc(var(--bs-gutter-x)/ 2);
+    }
+
+    .login-head {
+        padding: 0 !important;
+    }
 }
