@@ -4,6 +4,6 @@ const userRoutes = require('./user-routes.js');
 const plantRoutes = require('./plant_routes.js');
 
 router.use('/users', userRoutes);
-router.use('/plants', postRoutes);
+router.use('/plants', plantRoutes);
 
 module.exports = router;
