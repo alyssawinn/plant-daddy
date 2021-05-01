@@ -57,9 +57,22 @@ footer p {
 }
 /* you can remove these i just use them to see the columns and rows*/
 .mike1 {
-    border: 10px double red;
+    text-align: right;
+    color: white;
+    width: 110px; height: 300px;
+   background-color: #A0DE21; 
+    -moz-border-radius: 100px 0px;
+    -webkit-border-radius: 100px 0px;
+    border-radius: 100px 0px;
+      
 }
 
 .mike2 {
-    border: 10px double green;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: darkgreen;
+    
+}
+
+.background {
+    background-image: url('https://images-na.ssl-images-amazon.com/images/I/71lFloOatLL._AC_SL1000_.jpg');
 }
