@@ -98,12 +98,19 @@ footer p {
     background: none;
 }
 
-.container {
-    margin: 0 !important;
+.plant-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .search-bar {
     background-color: #EADDCA;
+    padding: 20px;
+}
+
+.search-bar input,
+.search-bar select {
+    width: 50%;
 }
 
 .search-bar-home {
@@ -189,6 +196,11 @@ footer p {
         height: 43vh;
         padding-top: 15%;
     }
+
+    .search-bar input,
+    .search-bar select {
+    width: 100%;
+}
 
     .signup-section {
         height: 43vh;
