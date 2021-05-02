@@ -7,9 +7,10 @@
     <title>Plant Daddy</title>
     <link rel="stylesheet" href="./public/stylesheets/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
-    <div class="wrapper background">
+    <div class="wrapper background search-page">
       <header>
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
@@ -23,7 +24,7 @@
                   <a class="nav-link" aria-current="page" href="./test.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Search</a>
+                  <a class="nav-link" href="./search.html">Search</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">My Plants</a>
@@ -39,11 +40,9 @@
           </div>
         </nav>
       </header>
-
-        <main>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 search-bar-home">
+      <div class="flex-container">
+        <section>
+            <div class="search-bar">
               <h1>Browse Plants</h1>
                 <form>
                   <div class="form-group">
@@ -61,27 +60,47 @@
                   </div>
                 </form>
             </div>
-            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 signup-head">
-              <div class="signup-section">
-                <h1>Sign up</h1>
-                <p>Create a profile to keep track of your plant babies</p>
-                <form>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" class="form-control" />
-                    <label for="username">First Name</label>
-                    <input type="text" id="firstname" class="form-control" />
-                    <label for="password">Password</label>
-                    <input type="password" id="password" class="form-control" />
-                    <button type="submit" class="btn btn-primary">Let's grow ></button>
-                  </div>
-                </form>
+          </section>
+          <section>
+            <div class="plant-container">
+              <div class="card plant-card">
+                <div class="card-body">
+                <h2 class="card-title">Macho Fern</h2>
+                <p class="card-subtitle mb-2 text-muted plant-cat">House Plant</p>
+                <img src='./assets/images/fern.jpg' />
+                <p class="card-text"><span class="fas fa-tint"></span> Once a week</p>
+                <p class="card-text"><span class="fas fa-sun"></span> Part Sun</p>
+                </div>
+              </div>
+              <div class="card plant-card">
+                <div class="card-body">
+                <h2 class="card-title">Macho Fern</h2>
+                <p class="card-subtitle mb-2 text-muted plant-cat">House Plant</p>
+                <img src='./assets/images/fern.jpg' />
+                <p class="card-text"><span class="fas fa-tint"></span> Once a week</p>
+                <p class="card-text"><span class="fas fa-sun"></span> Part Sun</p>
               </div>
             </div>
+            <div class="card plant-card">
+              <div class="card-body">
+              <h2 class="card-title">Macho Fern</h2>
+              <p class="card-subtitle mb-2 text-muted plant-cat">House Plant</p>
+              <img src='./assets/images/fern.jpg' />
+              <p class="card-text"><span class="fas fa-tint"></span> Once a week</p>
+              <p class="card-text"><span class="fas fa-sun"></span> Part Sun</p>
+            </div>
           </div>
-        </div>   
-        </main>
-
+          <div class="card plant-card">
+            <div class="card-body">
+            <h2 class="card-title">Macho Fern</h2>
+            <p class="card-subtitle mb-2 text-muted plant-cat">House Plant</p>
+            <img src='./assets/images/fern.jpg' />
+            <p class="card-text"><span class="fas fa-tint"></span> Once a week</p>
+            <p class="card-text"><span class="fas fa-sun"></span> Part Sun</p>
+          </div>
+        </div>
+          </section>
+</div>
         <footer>
             <div class="navbar fixed-bottom">
                 <p>We're rooting for you!</p>
