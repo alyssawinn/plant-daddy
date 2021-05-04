@@ -98,9 +98,14 @@ footer p {
     background: none;
 }
 
+.container {
+    margin-left: 0px !important;
+}
+
 .plant-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .search-bar {
@@ -129,8 +134,29 @@ footer p {
     margin-left: 200px;
 }
 
+.loggedin-homepage {
+    background-color: transparent;
+    text-align: center;
+    margin-top: 40%;
+}
+
 .form-group > button {
     margin-top: 10px !important;
+}
+
+.my-plants {
+    background-color: #EADDCA;
+    padding: 20px;
+    text-align: center;
+}
+
+.plant-card label {
+    display: none;
+}
+
+.plant-card input {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .card {
@@ -218,4 +244,22 @@ footer p {
     .signup-head, .login-head {
         padding: 0 !important;
     }
+
+    .card {
+        width: 200px !important;
+    }
+
+    .card img {
+        width: 170px;
+        height: 170px;
+    }
 }
+
+@media screen and (max-width: 496px) {
+    .card {
+        width: 90% !important;
+    }
+}
+
+
+

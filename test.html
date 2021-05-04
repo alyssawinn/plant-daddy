@@ -1,93 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plant Daddy</title>
-    <link rel="stylesheet" href="./public/stylesheets/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Daddy</title>
+  <link rel="stylesheet" href="./public/stylesheets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 </head>
+
 <body>
-    <div class="wrapper background">
-      <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Plant Daddy</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="./test.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Search</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">My Plants</a>
-                </li>
-                <li class="nav-item">
-                  <button class="btn-no-style" href="#">Logout</button>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./login.html">Login</a>
-                </li>
-              </ul>
-            </div>
+  <div class="wrapper background">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Plant Daddy</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./test.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./search.html">Search</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Plants</a>
+              </li>
+              <li class="nav-item">
+                <button class="btn-no-style" href="#">Logout</button>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./login.html">Login</a>
+              </li>
+            </ul>
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
 
-        <main>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 search-bar-home">
-              <h1>Browse Plants</h1>
-                <form>
-                  <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" class="form-control" />
-                    <label for="category">Category</label>
-                    <select id="category" class="form-control">
-                      <option disabled selected></option>
-                      <option value="house-plants">House Plants</option>
-                      <option value="succulents">Succulents</option>
-                      <option value="orchids">Orchids</option>
-                      <option value="bonsai-trees">Bonsai Trees</option>
-                    </select>
-                    <button type="submit" class="btn btn-primary">Search</button>
-                  </div>
-                </form>
-            </div>
-            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 signup-head">
-              <div class="signup-section">
-                <h1>Sign up</h1>
-                <p>Create a profile to keep track of your plant babies</p>
-                <form>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" class="form-control" />
-                    <label for="username">First Name</label>
-                    <input type="text" id="firstname" class="form-control" />
-                    <label for="password">Password</label>
-                    <input type="password" id="password" class="form-control" />
-                    <button type="submit" class="btn btn-primary">Let's grow ></button>
-                  </div>
-                </form>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 search-bar-home">
+            <h1>Browse Plants</h1>
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" />
+                <label for="category">Category</label>
+                <select id="category" class="form-control">
+                  <option disabled selected></option>
+                  <option value="house-plants">House Plants</option>
+                  <option value="succulents">Succulents</option>
+                  <option value="orchids">Orchids</option>
+                  <option value="bonsai-trees">Bonsai Trees</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Search</button>
               </div>
+            </form>
+          </div>
+          <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 signup-head">
+            <div class="signup-section">
+              <h1>Sign up</h1>
+              <p>Create a profile to keep track of your plant babies</p>
+              <form>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" class="form-control" />
+                  <label for="username">First Name</label>
+                  <input type="text" id="firstname" class="form-control" />
+                  <label for="password">Password</label>
+                  <input type="password" id="password" class="form-control" />
+                  <button type="submit" class="btn btn-primary">Let's grow ></button>
+                </div>
+              </form>
             </div>
           </div>
-        </div>   
-        </main>
+        </div>
+      </div>
+    </section>
 
-        <footer>
-            <div class="navbar fixed-bottom">
-                <p>We're rooting for you!</p>
-            </div>
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <footer>
+      <div class="navbar fixed-bottom">
+        <p>We're rooting for you!</p>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

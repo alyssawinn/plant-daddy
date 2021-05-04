@@ -99,7 +99,7 @@ const plantData = [
     }
 ];
 
-const seedPlant = () => PlantName.bulkCreate(plantData);
+const seedPlants = () => Plant.bulkCreate(plantData);
 
-module.exports = seedPlant;
+module.exports = seedPlants;
 
