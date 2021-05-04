@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+:root {
+    --primary-color: #fff;
+    --secondary-color: #00611C;
+}
 
 * {
     box-sizing: border-box;
@@ -12,7 +16,7 @@ body, html {
 }
 
 a {
-    color: #fff !important;
+    color: var(--primary-color) !important;
 }
 
 a:hover {
@@ -24,13 +28,13 @@ footer p {
 }
 
 .btn-primary {
-    background-color: #00611C !important;
-    border-color: #00611C !important;
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
 }
 
 .btn-primary:hover, .btn-primary:active {
-    background-color: #fff !important;
-    color: #00611c !important;
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
 }
 
 .btn-no-style {
@@ -38,7 +42,7 @@ footer p {
     border: none;
     cursor: pointer;
     text-decoration: none;
-    color: #fff;
+    color: var(--primary-color);
     font-size: 100%;
     font-weight: normal;
     transition: color .1s;
@@ -50,12 +54,12 @@ footer p {
   
   .btn-no-style:hover {
     background: none;
-    color: #fff;
+    color: var(--primary-color);
     text-decoration: underline;
   }
 
 .navbar {
-    background-color: #00611C !important;
+    background-color: var(--secondary-color) !important;
 }
 
 .navbar > .container-fluid {
@@ -63,7 +67,7 @@ footer p {
 }
 
 .navbar-toggler {
-    background-color: #fff !important;
+    background-color: var(--primary-color) !important;
 }
 
 .wrapper {
@@ -75,8 +79,8 @@ footer p {
 .fixed-bottom {
     width: 100%;
     margin: 0 auto;
-    background-color: #00611C;
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .navbar-brand {
