@@ -1,0 +1,15 @@
+<div class="flex-container">
+    <section>
+        <div class="my-plants">
+            <h1>My Plants</h1>
+        </div>
+        <div class="plant-container">
+            {{#each plants as |plant|}}
+            <div class="card plant-card">
+                <div class="card-body">
+                    {{> myplants-search-info plant}}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

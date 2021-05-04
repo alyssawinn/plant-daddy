@@ -134,6 +134,12 @@ footer p {
     margin-left: 200px;
 }
 
+.loggedin-homepage {
+    background-color: transparent;
+    text-align: center;
+    margin-top: 40%;
+}
+
 .form-group > button {
     margin-top: 10px !important;
 }
