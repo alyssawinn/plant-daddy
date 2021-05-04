@@ -20,7 +20,7 @@ const sess = {
    })
 };
 
-app.user(session(sess));
+//app.user(session(sess));
 
 const hbs = exphbs.create({ helpers });
 
