@@ -23,6 +23,37 @@ footer p {
     margin: .5rem auto;
 }
 
+.btn-primary {
+    background-color: #00611C !important;
+    border-color: #00611C !important;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: #fff !important;
+    color: #00611c !important;
+}
+
+.btn-no-style {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-size: 100%;
+    font-weight: normal;
+    transition: color .1s;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    padding-top: 8px;
+    padding-bottom: 0;
+  }
+  
+  .btn-no-style:hover {
+    background: none;
+    color: #fff;
+    text-decoration: underline;
+  }
+
 .navbar {
     background-color: #00611C !important;
 }
@@ -54,4 +85,137 @@ footer p {
 
 .navbar-brand:hover {
     text-decoration: none;
+}
+
+.background {
+    background: url('../../assets/images/homepage-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top right;
+}
+
+.search-page {
+    background: none;
+}
+
+.plant-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-bar {
+    background-color: #EADDCA;
+    padding: 20px;
+}
+
+.search-bar input,
+.search-bar select {
+    width: 50%;
+}
+
+.search-bar-home {
+    background-color: #EADDCA;
+    height: 87vh;
+    padding-top: 20%;
+}
+
+.signup-section, .login-section {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #EEEEEE;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+.form-group > button {
+    margin-top: 10px !important;
+}
+
+.card {
+    width: 300px !important;
+    border: 1px solid #BCED91 !important;
+    margin: 20px;
+    padding: 5px;
+}
+
+.card h2 {
+    text-align: center;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.card p {
+    margin-bottom: .5rem;
+    width: 125px;
+    margin: 0 auto;
+}
+
+.plant-cat {
+    text-align: center;
+}
+
+.fa-tint {
+    color: #0D4F8B;
+    font-size: 1.5em;
+}
+
+.fa-sun {
+    color: #FFE600;
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 992px) {
+    .signup-section, .login-section {
+        margin-left: 100px;
+    }
+
+    .btn-no-style {
+        padding-left: 0px;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    .background {
+        background: none;
+    }
+
+    .search-bar-home {
+        height: 43vh;
+        padding-top: 15%;
+    }
+
+    .search-bar input,
+    .search-bar select {
+    width: 100%;
+}
+
+    .signup-section {
+        height: 43vh;
+    }
+
+    .signup-section, .login-section {
+        margin-top: initial;
+        margin-left: initial;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        padding-right: calc(var(--bs-gutter-x)/ 2);
+        padding-left: calc(var(--bs-gutter-x)/ 2);
+    }
+
+    .signup-head, .login-head {
+        padding: 0 !important;
+    }
 }
