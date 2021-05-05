@@ -2,6 +2,7 @@
 :root {
     --primary-color: #fff;
     --secondary-color: #00611C;
+    --tertiary-color: #EADDCA;
 }
 
 * {
@@ -92,7 +93,7 @@ footer p {
 }
 
 .background {
-    background: url('../../assets/images/homepage-background.jpg');
+    background: url('/images/homepage-background.jpg');
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: top right;
@@ -110,10 +111,11 @@ footer p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 60px;
 }
 
 .search-bar {
-    background-color: #EADDCA;
+    background-color: var(--tertiary-color);
     padding: 20px;
 }
 
@@ -123,7 +125,7 @@ footer p {
 }
 
 .search-bar-home {
-    background-color: #EADDCA;
+    background-color: var(--tertiary-color);
     height: 87vh;
     padding-top: 20%;
 }
@@ -149,7 +151,7 @@ footer p {
 }
 
 .my-plants {
-    background-color: #EADDCA;
+    background-color: var(--tertiary-color);
     padding: 20px;
     text-align: center;
 }
