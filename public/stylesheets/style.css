@@ -92,7 +92,7 @@ footer p {
 }
 
 .background {
-    background: url('../../assets/images/homepage-background.jpg');
+    background: url('/images/homepage-background.jpg');
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: top right;
@@ -110,6 +110,7 @@ footer p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 60px;
 }
 
 .search-bar {
