@@ -207,6 +207,11 @@ footer p {
     font-size: 1.5em;
 }
 
+.add-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
 @media screen and (max-width: 992px) {
     .signup-section, .login-section {
         margin-left: 100px;
