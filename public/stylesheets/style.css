@@ -114,6 +114,10 @@ footer p {
     padding-bottom: 60px;
 }
 
+.plant-container h3 {
+    text-align: center;
+}
+
 .search-bar {
     background-color: var(--tertiary-color);
     padding: 20px;
