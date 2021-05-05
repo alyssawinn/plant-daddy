@@ -16,6 +16,22 @@ An application that helps indoor plant lovers learn about their plant babies. It
 * Link 3rd party plant APIs
 * Expand to gardening (fruits and vegetables)
 
+## Technologies Used
+
+* HTML for static pages
+* Handlebars for server side templating
+* Javacript and jQuery for dynamic
+* Bootstrap
+* Vanilla CSS
+* Google Fonts
+* Postman to ensure GET and POST routes were working
+* Uses Node and Express 
+* MySQL and Sequelize ORM for database
+* Passport for user authentication
+* Google Places for maps on each activity
+* Fully deployed and hosted on Heroku
+
+
 ## Screenshots
 
 ## Usage

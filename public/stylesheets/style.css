@@ -2,6 +2,7 @@
 :root {
     --primary-color: #fff;
     --secondary-color: #00611C;
+    --tertiary-color: #EADDCA;
 }
 
 * {
@@ -113,7 +114,7 @@ footer p {
 }
 
 .search-bar {
-    background-color: #EADDCA;
+    background-color: var(--tertiary-color);
     padding: 20px;
 }
 
@@ -123,7 +124,7 @@ footer p {
 }
 
 .search-bar-home {
-    background-color: #EADDCA;
+    background-color: var(--tertiary-color);
     height: 87vh;
     padding-top: 20%;
 }
@@ -149,7 +150,7 @@ footer p {
 }
 
 .my-plants {
-    background-color: #EADDCA;
+    background-color: var(--tertiary-color);
     padding: 20px;
     text-align: center;
 }
