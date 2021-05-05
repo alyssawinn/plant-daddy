@@ -15,11 +15,11 @@ Plant.init(
                 allowNull: false,
                 //validation?
             },
-                waterAmount: {
+            waterAmount: {
                     type: DataTypes.STRING,
                     allowNull: false,
                 },
-                sunlightAmount: {
+            sunlightAmount: {
                     type: DataTypes.STRING,
                     allowNull: false,
                 },
