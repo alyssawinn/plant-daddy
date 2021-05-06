@@ -36,7 +36,7 @@ PlantType.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'plant'
+        modelName: 'plantType'
     }
 );
 

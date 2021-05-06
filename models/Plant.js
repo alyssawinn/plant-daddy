@@ -19,7 +19,7 @@ Plant.init(
               key: 'id'
           }
       },
-      plant_id: {
+      plantType_id: {
           type: DataTypes.INTEGER,
           references: {
               model: 'plantType',

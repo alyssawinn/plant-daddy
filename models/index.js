@@ -8,30 +8,25 @@ User.hasMany(Plant, {
 });
 
 Plant.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
+    foreignKey: 'user_id'
 });
 
 User.belongsToMany(PlantType, {
     through: Plant,
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
+    foreignKey: 'user_id'
 });
 
 PlantType.belongsToMany(User, {
     through: Plant, 
-    foreignKey: 'plant_id',
-    onDelete: 'SET NULL'
+    foreignKey: 'plant_id'
 });
 
-PlantCategory.belongsTo(PlantType, {
-    foreignKey: 'plant_id',
-    onDelete: 'SET NULL'
+PlantType.belongsTo(PlantCategory, {
+    foreignKey: 'plant_id'
 });
 
 PlantCategory.hasMany(PlantType, {
-    foreignKey: 'plant_id',
-    onDelete: 'SET NULL'
+    foreignKey: 'plant_id'
 });
 
 
