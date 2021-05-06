@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { Plant } = require('../../models');
+const { PlantType } = require('../../models');
 
 router.get('/', (req, res) => {
-Plant.findAll({
+PlantType.findAll({
     order: [['category_id', 'DESC']],
     attributes: [
             'id',
@@ -10,7 +10,7 @@ Plant.findAll({
             'category_id'
         ]
 })
-    .then(dbPlantData => res.json(dbPlantData))
+    .then(dbPlantTypeData => res.json(dbPlantTypeData))
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
@@ -18,7 +18,7 @@ Plant.findAll({
 });
 
 router.get('/:id', (req, res) => {
-    Plant.findOne({
+    PlantType.findOne({
         where: {
             id: req.params.id
         },
@@ -30,12 +30,12 @@ router.get('/:id', (req, res) => {
             'category_id'
         ]
     })
-    .then(dbPlantData => {
-            if (!dbPlantData) {
+    .then(dbPlantTypeData => {
+            if (!dbPlantTypeData) {
             res.status(404).json({ message: 'No plant found with that id'});
             return;
             }
-        res.json(dbPlantData);
+        res.json(dbPlantTypeData);
     })
     .catch(err => {
         console.log(err);
@@ -44,13 +44,13 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    Plant.create({
+    PlantType.create({
         name: req.body.name,
         waterAmount: req.body.waterAmount,
         sunlightAmount: req.body.sunlightAmount,
         category_id: req.body.category_id
     })
-    .then(dbPlantData => res.json(dbPlantData))
+    .then(dbPlantTypeData => res.json(dbPlantTypeData))
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
@@ -70,12 +70,12 @@ router.put('/', (req, res) => {
         }
     }
     )
-    .then(dbPlantData => {
-        if (!dbPlantData) {
+    .then(dbPlantTypeData => {
+        if (!dbPlantTypeData) {
             res.status(404).json({ message: 'no post found with this id '});
             return;
         }
-        res.json(dbPlantData); 
+        res.json(dbPlantTypeData); 
     })
     .catch(err => {
         console.log(err);
@@ -84,17 +84,17 @@ router.put('/', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-    Plant.destroy({
+    PlantType.destroy({
         where: {
             id: req.params.id
         }
     })
-    .then(dbPlantData => {
-        if (!dbPlantData) {
+    .then(dbPlantTypeData => {
+        if (!dbPlantTypeData) {
             res.status(404).json({ message: 'No plant found with this id'});
             return;
         }
-        res.json(dbPlantData);
+        res.json(dbPlantTypeData);
     })
     .catch(err => {
         console.log(err);
