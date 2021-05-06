@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { User, Plant, PlantCategory } = require('../models');
+const { User, PlantType, PlantCategory } = require('../models');
 
 router.get('/', (req, res) => {
   console.log('======================');
-  Plant.findAll({
+  PlantType.findAll({
     attributes: [
       'id',
       'name',
@@ -13,11 +13,11 @@ router.get('/', (req, res) => {
       'category_id'
     ],
   })
-    .then(dbPlantData => {
-      const plants = dbPlantData.map(plant => plant.get({ plain: true }));
+    .then(dbPlantTypeData => {
+      const PlantTypes = dbPlantTypeData.map(PlantType => PlantType.get({ plain: true }));
 
       res.render('homepage', {
-        plants,
+        PlantTypes,
         loggedIn: req.session.loggedIn
       });
     })
@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
 
 // get single post
 router.get('/post/:id', (req, res) => {
-  Plant.findOne({
+  PlantType.findOne({
     where: {
       id: req.params.id
     },
@@ -41,16 +41,16 @@ router.get('/post/:id', (req, res) => {
       'category_id'
     ],
   })
-    .then(dbPlantData => {
-      if (!dbPlantData) {
-        res.status(404).json({ message: 'No plants found with this id' });
+    .then(dbPlantTypeData => {
+      if (!dbPlantTypeData) {
+        res.status(404).json({ message: 'No PlantTypes found with this id' });
         return;
       }
 
-      const plant = dbPlantData.get({ plain: true });
+      const PlantType = dbPlantTypeData.get({ plain: true });
 
       res.render('single-post', {
-        plant,
+        PlantType,
         loggedIn: req.session.loggedIn
       });
     })
