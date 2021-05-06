@@ -11,9 +11,14 @@
             <div class="card plant-card">
                 <div class="card-body">
                     {{> plants-info plant}}
+                    {{#if loggedIn}}
                     {{> add-btn}}
+                    {{/if}}
                 </div>
             </div>
         </div>
     </section>
 </div>
+
+<script src="/javascript/search-plants.js"></script>
+<script src="/javascript/add-plants.js"></script>

@@ -3,6 +3,10 @@ const sequelize = require('../config/connection');
 const { User, Plant, PlantCategory } = require('../models');
 
 router.get('/', (req, res) => {
+  res.render('homepage');
+});
+
+/* router.get('/', (req, res) => {
   console.log('======================');
   Plant.findAll({
     attributes: [
@@ -58,7 +62,7 @@ router.get('/post/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-});
+}); */
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {

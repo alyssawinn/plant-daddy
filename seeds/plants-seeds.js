@@ -1,4 +1,4 @@
-const { Plant } = require('../models');
+const { PlantType } = require('../models');
 
 const plantData = [
     {
@@ -7,7 +7,7 @@ const plantData = [
         sunlightAmount: "Part Sun",
         waterAmount: "When soil is dry",
         category_id: 2,
-        user_id: []
+        user_id: 1
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const plantData = [
         sunlightAmount: "Sun or Shade",
         waterAmount: "Every other week",
         category_id: 2,
-        user_id: []
+        user_id: 1
     },
     {
         id: 3,
@@ -23,7 +23,7 @@ const plantData = [
         sunlightAmount: "Part Sun",
         waterAmount: "When soil is dry",
         category_id: 2,
-        user_id: []
+        user_id: 1
     },
     {
         id: 4,
@@ -31,7 +31,7 @@ const plantData = [
         sunlightAmount: "Full Sun",
         waterAmount: "When soil is dry",
         category_id: 3,
-        user_id: []
+        user_id: 1
     },
     {
         id: 5,
@@ -39,7 +39,7 @@ const plantData = [
         sunlightAmount: "Full Sun",
         waterAmount: "Every other week",
         category_id: 3,
-        user_id: []
+        user_id: 1
     },
     {
         id: 6,
@@ -47,7 +47,7 @@ const plantData = [
         sunlightAmount: "Full Sun",
         waterAmount: "Every other week",
         category_id: 3,
-        user_id: []
+        user_id: 1
     },
     {
         id: 7,
@@ -55,7 +55,7 @@ const plantData = [
         sunlightAmount: "Full Sun",
         waterAmount: "When soil is dry",
         category_id: 3,
-        user_id: []
+        user_id: 1
     },
     {
         id: 8,
@@ -63,7 +63,7 @@ const plantData = [
         sunlightAmount: "Full Sun",
         waterAmount: "Once a week",
         category_id: 1,
-        user_id: []
+        user_id: 1
     },
     {
         id: 9,
@@ -71,7 +71,7 @@ const plantData = [
         sunlightAmount: "Full Sun",
         waterAmount: "Twice a week",
         category_id: 1,
-        user_id: []
+        user_id: 1
     },
     {
         id: 10,
@@ -79,7 +79,7 @@ const plantData = [
         sunlightAmount: "Sun or Shade",
         waterAmount: "Once a week",
         category_id: 4,
-        user_id: []
+        user_id: 1
     },
     {
         id: 11,
@@ -87,7 +87,7 @@ const plantData = [
         sunlightAmount: "Part Sun",
         waterAmount: "When soil is dry",
         category_id: 4,
-        user_id: []
+        user_id: 1
     },
     {
         id: 12,
@@ -95,11 +95,11 @@ const plantData = [
         sunlightAmount: "Sun or Shade",
         waterAmount: "When soil is dry",
         category_id: 4,
-        user_id: []
+        user_id: 1
     }
 ];
 
-const seedPlants = () => Plant.bulkCreate(plantData);
+const seedPlants = () => PlantType.bulkCreate(plantData);
 
 module.exports = seedPlants;
 
