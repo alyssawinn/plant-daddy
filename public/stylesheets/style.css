@@ -93,7 +93,7 @@ footer p {
 }
 
 .background {
-    background: url('/images/homepage-background.jpg');
+    background: url('../images/homepage-background.jpg');
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: top right;
