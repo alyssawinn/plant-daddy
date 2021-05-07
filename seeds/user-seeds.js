@@ -5,8 +5,7 @@ const userData = [
         id: 1,
         firstname: "Plant Daddy Admin",
         email: "admin@plantdaddy.com",
-        password: "password",
-        admin: 1
+        password: "password"
     }
 ];
 
