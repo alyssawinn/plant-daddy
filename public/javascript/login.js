@@ -1,8 +1,8 @@
 async function loginFormHandler(event) {
   event.preventDefault();
 
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
+  const email = document.getElementById('email-login').value.trim();
+  const password = document.getElementById('password-login').value.trim();
 
   if (email && password) {
     const response = await fetch('/api/users/login', {
@@ -26,9 +26,9 @@ async function signupFormHandler(event) {
   event.preventDefault();
 
   
-  const email = document.querySelector('#email-signup').value.trim();
-  const firstname = document.querySelector('#firstname-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
+  const email = document.getElementById('email-signup').value.trim();
+  const firstname = document.getElementById('firstname-signup').value.trim();
+  const password = document.getElementById('password-signup').value.trim();
 
   console.log(email, firstname, password);
 
@@ -44,7 +44,7 @@ async function signupFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace('/homepage');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }

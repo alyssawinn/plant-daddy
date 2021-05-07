@@ -1,25 +1,28 @@
 async function searchFormHandler(event) {
     event.preventDefault();
+    var initialSearch = true;
 
-    const name = document.querySelector('input[name="name"]').value;
-    const category = document.querySelector('input[name="category"]').value;
+    const selectedCategory = document.getElementById("category").value;
+    console.log(selectedCategory);
 
-    const response = await fetch(`/api/plants`, {
+    /* const response = await fetch(`/api/plants`, {
         method: 'GET',
         body: JSON.stringify({
-            name,
-            category,
+            category
         }),
         headers: {
             'Content-Type': 'application/json'
         }
-    });
+    }); */
 
-    if (response.ok) {
+    /* fetch(`/api/plants`) */
+
+    /* if (response.ok) {
         document.location.reload();
     } else {
+        var initialSearch = false;
         alert(response.statusText);
-    }
+    } */
 }
 
 document.querySelector('.search-bar-form').addEventListener('submit', searchFormHandler);
