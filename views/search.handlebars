@@ -1,4 +1,4 @@
-<div class="flex-container search-page">
+<div class="flex-container">
     <section>
         <div class="search-bar">
             <h1>Browse Plants</h1>
@@ -16,9 +16,12 @@
                     {{/if}}
                 </div>
             </div>
+            {{/each}}
         </div>
     </section>
 </div>
 
 <script src="/javascript/search-plants.js"></script>
+{{#if initialSearch}}
 <script src="/javascript/add-plants.js"></script>
+{{/if}}
