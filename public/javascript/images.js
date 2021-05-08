@@ -42,6 +42,9 @@ function imageResults(response) {
             image.setAttribute("src", result)
             //add padding to the images, and max width and height
             image.classList.add('p-8','w-full')
+
+            console.log(image);
+            
             return image
             
         };
