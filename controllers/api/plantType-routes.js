@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { PlantType, Plant } = require('../../models');
 
 router.get('/', (req, res) => {
-    console.log(res.body);
 PlantType.findAll({
     order: [['category_id', 'DESC']],
     attributes: [

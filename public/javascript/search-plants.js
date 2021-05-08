@@ -14,8 +14,6 @@ async function searchFormHandler(event) {
         }
     }).then(res => res.text()).then(data => data)
 
-    console.log(response);
-
      /* if (response.ok) {
         document.location.reload();
     } else {
