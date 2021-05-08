@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { PlantType } = require('../../models');
+const { PlantType, Plant } = require('../../models');
 
 router.get('/', (req, res) => {
 PlantType.findAll({
@@ -43,6 +43,30 @@ router.get('/:id', (req, res) => {
     });
 });
 
+router.get('/userPlant/:id', (req,res) => {
+    Plant.findAll({
+        where: {
+            user_id: req.params.id
+        },
+        attributes: [
+            'id',
+            'user_id',
+            'plantType_id'
+        ]
+    })
+    .then(dbPlantData => {
+        if (!dbPlantData) {
+            res.status(404).json({ message: 'No plant found with that id'});
+            return;
+        }
+        res.json(dbPlantData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 router.post('/', (req, res) => {
     PlantType.create({
         name: req.body.name,
@@ -57,8 +81,20 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/', (req, res) => {
-    Post.update(
+router.post('/userPlant', (req,res) => {
+    Plant.create({
+        user_id: req.body.user_id,
+        plantType_id: req.body.plantType_id
+    })
+    .then(dbPlantData => res.json(dbPlantData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+})
+
+router.put('/:id', (req, res) => {
+    PlantType.update(
         {
             name: req.body.name,
             waterAmount: req.body.waterAmount,

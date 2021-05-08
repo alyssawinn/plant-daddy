@@ -11,7 +11,7 @@ const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-   secret: 'Super secret secret',
+   secret: 'this is a secret',
    cookie: {},
    resave: false,
    saveUninitialized: true,
@@ -20,7 +20,7 @@ const sess = {
    })
 };
 
-//app.user(session(sess));
+app.use(session(sess));
 
 const hbs = exphbs.create({});
 
