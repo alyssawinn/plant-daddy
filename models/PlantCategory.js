@@ -12,8 +12,7 @@ PlantCategory.init(
             },
             category: {
                 type: DataTypes.STRING,
-                allowNull: false,
-                //validation?
+                allowNull: false
             },
         },
         {
