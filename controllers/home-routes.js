@@ -10,8 +10,7 @@ router.get('/search', (req, res) => {
   res.render('search');
 });
 
-router.get('/', (req, res) => {
-  console.log('======================');
+router.get('/plantType', (req, res) => {
   PlantType.findAll({
     attributes: [
       'id',
@@ -22,10 +21,10 @@ router.get('/', (req, res) => {
     ],
   })
     .then(dbPlantTypeData => {
-      const PlantTypes = dbPlantTypeData.map(PlantType => PlantType.get({ plain: true }));
+      const PlantType = dbPlantTypeData.map(PlantType => PlantType.get({ plain: true }));
 
       res.render('search', {
-        PlantTypes,
+        PlantType,
         loggedIn: req.session.loggedIn
       });
     })
@@ -35,25 +34,56 @@ router.get('/', (req, res) => {
     });
 });
 
-// get single post
-// router.get('/post/:id', (req, res) => {
-//   PlantType.findOne({
-//     where: {
-//       id: req.params.id
-//     },
-//     attributes: [
-//       'id',
-//       'name',
-//       'waterAmount',
-//       'sunlightAmount',
-//       'category_id'
-//     ],
-//   })
-//     .then(dbPlantTypeData => {
-//       if (!dbPlantTypeData) {
-//         res.status(404).json({ message: 'No PlantTypes found with this id' });
-//         return;
-//       }
+router.get('/plantType/:id', (req, res) => {
+  PlantType.findOne({
+    where: {
+      id: req.params.id
+    },
+    attributes: [
+      'id',
+      'name',
+      'waterAmount',
+      'sunlightAmount'
+    ],
+    include: [
+      {
+        model: PlantCategory,
+        attribute: ['category']
+      }
+    ]
+  })
+  .then(dbPlantTypeData => {
+    if (!dbPlantTypeData) {
+      res.status(404).json({ message: 'No plant type found with this id' });
+      return
+    }
+    const planttype = dbPlantTypeData.get({ plain: true });
+    res.render('plants-info', { planttype })
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+/* router.get('/post/:id', (req, res) => {
+  PlantType.findOne({
+    where: {
+      id: req.params.id
+    },
+    attributes: [
+      'id',
+      'name',
+      'waterAmount',
+      'sunlightAmount',
+      'category_id'
+    ],
+  })
+    .then(dbPlantTypeData => {
+      if (!dbPlantTypeData) {
+        res.status(404).json({ message: 'No PlantTypes found with this id' });
+        return;
+      }
 
 //       const PlantType = dbPlantTypeData.get({ plain: true });
 
@@ -75,6 +105,6 @@ router.get('/', (req, res) => {
 //   }
 
 //   res.render('login');
-// });
+// });*/
 
 module.exports = router;
