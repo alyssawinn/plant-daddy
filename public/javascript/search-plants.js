@@ -21,6 +21,7 @@ async function searchFormHandler(event) {
             .then(data => {
                 for (i = 0; i < data.length; i++) {
                     if ((selectedCategory == data[i].category_id)) {
+                        data[i]['image'] = getImage(selectedName)
                         selectedArray.push(data[i]);
                     } else if ((data[i].name.indexOf(selectedName) == 0) && (selectedName.length > 0)) {
                         selectedArray.push(data[i]);
@@ -34,6 +35,10 @@ async function searchFormHandler(event) {
             })
     }
 
+
+}
+function getImage(data) {
+    //api request to return url.
 
 }
 

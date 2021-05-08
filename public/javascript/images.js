@@ -17,9 +17,9 @@ async function submitQuery(event) {
         '&api_key=642713395766141'
 
     ).then(response => response.json()) 
-    console.log(imageReturn);
+    // console.log(imageReturn);
         //CALL imageResults 
-    imageResults(imageReturn.response);
+    // imageResults(imageReturn.response);
     
 }
 
@@ -32,25 +32,25 @@ async function submitQuery(event) {
 //need to MAP the Arrays to get the image results of any search
 
 
-function imageResults(response) {
+// function imageResults(response) {
 
-    const imageSearchResults = document.querySelector('.-------')
+//     const imageSearchResults = document.querySelector('.-------')
 
-    imageSearchResults.innerHTML= '';
+//     imageSearchResults.innerHTML= '';
             
-            const image= document.createElement('img')
-            image.setAttribute("src", result)
-            //add padding to the images, and max width and height
-            image.classList.add('p-8','w-full')
+//             const image= document.createElement('img')
+//             image.setAttribute("src", result)
+//             //add padding to the images, and max width and height
+//             image.classList.add('p-8','w-full')
 
-            console.log(image);
+//             console.log(image);
             
-            return image
+//             return image
             
-        };
+//         };
                 
-    imageSearchResults.appendChild(item);
-    console.log(item);
+//     imageSearchResults.appendChild(item);
+//     console.log(item);
         
 
 

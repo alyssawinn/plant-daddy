@@ -6,7 +6,8 @@ const plantData = [
         name: "Fern",
         sunlightAmount: "Part Sun",
         waterAmount: "When soil is dry",
-        category_id: 2
+        category_id: 2,
+        image_url: 'https://res.cloudinary.com/duryryfnr/image/upload/v1620264916/plant_daddy/fern_i620ru.jpg'
     },
     {
         id: 2,
