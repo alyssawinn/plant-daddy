@@ -1,13 +1,19 @@
 const router = require('express').Router();
-const { PlantType, Plant } = require('../../models');
+const { PlantType, Plant, PlantCategory } = require('../../models');
 
 router.get('/', (req, res) => {
 PlantType.findAll({
-    order: [['category_id', 'DESC']],
     attributes: [
             'id',
             'name',
-            'category_id'
+            'waterAmount',
+            'sunlightAmount'
+        ],
+        include: [
+            {
+                model: PlantCategory,
+                attribute: ['category']
+            }
         ]
 })
     .then(dbPlantTypeData => res.json(dbPlantTypeData))
