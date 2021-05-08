@@ -10,7 +10,7 @@ router.get('/search', (req, res) => {
   res.render('search');
 });
 
-/* router.get('/', (req, res) => {
+router.get('/', (req, res) => {
   console.log('======================');
   PlantType.findAll({
     attributes: [
@@ -24,7 +24,7 @@ router.get('/search', (req, res) => {
     .then(dbPlantTypeData => {
       const PlantTypes = dbPlantTypeData.map(PlantType => PlantType.get({ plain: true }));
 
-      res.render('homepage', {
+      res.render('search', {
         PlantTypes,
         loggedIn: req.session.loggedIn
       });
@@ -36,45 +36,45 @@ router.get('/search', (req, res) => {
 });
 
 // get single post
-router.get('/post/:id', (req, res) => {
-  PlantType.findOne({
-    where: {
-      id: req.params.id
-    },
-    attributes: [
-      'id',
-      'name',
-      'waterAmount',
-      'sunlightAmount',
-      'category_id'
-    ],
-  })
-    .then(dbPlantTypeData => {
-      if (!dbPlantTypeData) {
-        res.status(404).json({ message: 'No PlantTypes found with this id' });
-        return;
-      }
+// router.get('/post/:id', (req, res) => {
+//   PlantType.findOne({
+//     where: {
+//       id: req.params.id
+//     },
+//     attributes: [
+//       'id',
+//       'name',
+//       'waterAmount',
+//       'sunlightAmount',
+//       'category_id'
+//     ],
+//   })
+//     .then(dbPlantTypeData => {
+//       if (!dbPlantTypeData) {
+//         res.status(404).json({ message: 'No PlantTypes found with this id' });
+//         return;
+//       }
 
-      const PlantType = dbPlantTypeData.get({ plain: true });
+//       const PlantType = dbPlantTypeData.get({ plain: true });
 
-      res.render('single-post', {
-        PlantType,
-        loggedIn: req.session.loggedIn
-      });
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-}); */
+//       res.render('single-post', {
+//         PlantType,
+//         loggedIn: req.session.loggedIn
+//       });
+//     })
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
-router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
+// router.get('/login', (req, res) => {
+//   if (req.session.loggedIn) {
+//     res.redirect('/');
+//     return;
+//   }
 
-  res.render('login');
-});
+//   res.render('login');
+// });
 
 module.exports = router;
