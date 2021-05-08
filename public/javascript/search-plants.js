@@ -12,9 +12,10 @@ async function searchFormHandler(event) {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
         }
-    }).then(res => res.text()).then(data => data)
+    }).then(res => res.text())
+    .then(data => data)
 
-     /* if (response.ok) {
+    /* if (response.ok) {
         document.location.reload();
     } else {
         var initialSearch = false;
