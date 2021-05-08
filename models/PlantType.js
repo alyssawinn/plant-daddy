@@ -12,8 +12,7 @@ PlantType.init(
         },
         name: {
             type: DataTypes.STRING,
-            allowNull: false,
-            //validation?
+            allowNull: false
         },
         waterAmount: {
             type: DataTypes.STRING,

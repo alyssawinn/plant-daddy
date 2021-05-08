@@ -22,12 +22,12 @@ PlantType.belongsToMany(User, {
 });
 
 PlantType.belongsTo(PlantCategory, {
-    foreignKey: 'plant_id'
+    foreignKey: 'category_id'
 });
 
-PlantCategory.hasMany(PlantType, {
-    foreignKey: 'plant_id'
-});
+/* PlantCategory.hasMany(PlantType, {
+    foreignKey: 'category_id'
+}); */
 
 
 module.exports = { User, PlantType, PlantCategory, Plant};

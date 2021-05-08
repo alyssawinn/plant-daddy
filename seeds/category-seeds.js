@@ -3,19 +3,19 @@ const { PlantCategory } = require('../models');
 const categoryData = [
     {
         id: 1,
-        category: "Bonsai Trees"
+        category: "Bonsai Tree"
     },
     {
         id: 2,
-        category: "House Plants"
+        category: "House Plant"
     },
     {
         id: 3,
-        category: "Succulents"
+        category: "Succulent"
     },
     {
         id: 4,
-        category: "Orchids"
+        category: "Orchid"
     }
 ];
 
