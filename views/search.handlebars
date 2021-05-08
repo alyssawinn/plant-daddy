@@ -6,17 +6,7 @@
         </div>
     </section>
     <section>
-        <div class="plant-container">
-            {{#each plants as |plant|}}
-            <div class="card plant-card">
-                <div class="card-body">
-                    {{> plants-info plant}}
-                    {{#if loggedIn}}
-                    {{> add-btn}}
-                    {{/if}}
-                </div>
-            </div>
-            {{/each}}
+        <div class="plant-container" id="plant-container">
         </div>
     </section>
 </div>
