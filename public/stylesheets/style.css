@@ -209,7 +209,7 @@ footer p {
     margin-bottom: 10px;
 }
 
-.add-btn {
+.add-btn, .add-btn-el {
     text-align: center;
 }
 

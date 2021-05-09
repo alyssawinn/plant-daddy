@@ -32,10 +32,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="/search">Browse</a>
               </li>
+              {{#if loggedIn}}
               <li class="nav-item">
                 <a class="nav-link" href="/myplants">My Plants</a>
               </li>
-              {{#if loggedIn}}
               <li class="nav-item">
                 <button class="btn-no-style" id="logout">Logout</button>
               </li>

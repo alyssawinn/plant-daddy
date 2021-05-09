@@ -14,7 +14,6 @@ async function searchFormHandler(event) {
 
 
     if (!(selectedCategory === "") || !(selectedName === "")) {
-        let initialSearch = true;
         const response = await fetch(`/api/plantType/`, {
             method: 'GET',
             headers: {
@@ -79,13 +78,11 @@ async function searchFormHandler(event) {
 
         let plantCardAddButtonEl = document.createElement("div");
         plantCardAddButtonEl.classList.add("add-btn-el");
-        plantCardAddButtonEl.classList.add("add-btn");
-
         let plantCardAddButton = document.createElement("button");
         plantCardAddButton.classList.add("btn");
         plantCardAddButton.classList.add("btn-primary");
         plantCardAddButton.classList.add("add-btn");
-        plantCardAddButton.setAttribute("type", "submit");
+        plantCardAddButton.setAttribute("id", "button" + i);
         plantCardAddButton.textContent = "Add to My Plants";
 
         plantCardAddButtonEl.appendChild(plantCardAddButton);
@@ -99,6 +96,9 @@ async function searchFormHandler(event) {
         plantContainerEl.appendChild(plantCard);
     }
 
+    $(".add-btn").click(function(){
+        $.getScript("/javascript/add-plants.js");
+      });
 
 }
 

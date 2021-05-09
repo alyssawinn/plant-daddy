@@ -19,7 +19,8 @@ async function signupFormHandler(event) {
       });
   
       if (response.ok) {
-        console.log('success');
+        window.location.replace('/');
+        firstname = dbUserData.firstname;
       } else {
         alert(response.statusText);
       }
