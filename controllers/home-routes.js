@@ -3,7 +3,10 @@ const sequelize = require('../config/connection');
 const { User, PlantType, PlantCategory } = require('../models');
 
 router.get('/', (req, res) => {
-  res.render('homepage');
+  res.render('homepage', {
+    loggedIn: req.session.loggedIn,
+    firstname: req.session.firstname
+  });
 });
 
 router.get('/search', (req, res) => {
