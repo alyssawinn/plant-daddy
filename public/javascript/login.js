@@ -15,7 +15,9 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
+      console.log(response);
       document.location.replace('/');
+      firstname = dbUserData.firstname;
     } else {
       alert(response.statusText);
     }

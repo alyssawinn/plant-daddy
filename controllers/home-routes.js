@@ -3,12 +3,19 @@ const sequelize = require('../config/connection');
 const { User, PlantType, PlantCategory } = require('../models');
 
 router.get('/', (req, res) => {
-  res.render('homepage');
+  res.render('homepage', {
+    loggedIn: req.session.loggedIn,
+    firstname: req.session.firstname
+  });
 });
 
 router.get('/search', (req, res) => {
   res.render('search');
 });
+
+router.get('/myplants', (req, res) => {
+  res.render('myplants');
+})
 
 router.get('/plantType', (req, res) => {
   PlantType.findAll({
@@ -85,26 +92,27 @@ router.get('/plantType/:id', (req, res) => {
         return;
       }
 
-//       const PlantType = dbPlantTypeData.get({ plain: true });
+      const PlantType = dbPlantTypeData.get({ plain: true });
 
-//       res.render('single-post', {
-//         PlantType,
-//         loggedIn: req.session.loggedIn
-//       });
-//     })
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
+      res.render('single-post', {
+        PlantType,
+        loggedIn: req.session.loggedIn
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+}); */
 
-// router.get('/login', (req, res) => {
-//   if (req.session.loggedIn) {
-//     res.redirect('/');
-//     return;
-//   }
-
-//   res.render('login');
-// });*/
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  } else {
+    res.render('login');
+  }
+  
+});
 
 module.exports = router;
