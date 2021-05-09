@@ -28,7 +28,8 @@ router.get('/plantType', (req, res) => {
       'name',
       'waterAmount',
       'sunlightAmount',
-      'category_id'
+      'category_id',
+      'image_url',
     ],
   })
     .then(dbPlantTypeData => {
@@ -54,7 +55,8 @@ router.get('/plantType/:id', (req, res) => {
       'id',
       'name',
       'waterAmount',
-      'sunlightAmount'
+      'sunlightAmount',
+      'image_url',
     ],
     include: [
       {

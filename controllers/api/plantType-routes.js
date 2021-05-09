@@ -7,7 +7,8 @@ PlantType.findAll({
             'id',
             'name',
             'waterAmount',
-            'sunlightAmount'
+            'sunlightAmount',
+            'image_url',
         ],
         include: [
             {
@@ -33,7 +34,8 @@ router.get('/:id', (req, res) => {
             'name',
             'waterAmount',
             'sunlightAmount',
-            'category_id'
+            'category_id',
+            'image_url',
         ]
     })
     .then(dbPlantTypeData => {

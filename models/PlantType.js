@@ -29,6 +29,10 @@ PlantType.init(
                 key: 'id'
             }
         },
+        image_url: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
     },
     {
         sequelize,
