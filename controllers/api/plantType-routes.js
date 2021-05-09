@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { PlantType, Plant, PlantCategory } = require('../../models');
+const { PlantType, Plant, PlantCategory, User } = require('../../models');
 
 router.get('/', (req, res) => {
 PlantType.findAll({
@@ -56,8 +56,21 @@ router.get('/userPlant/:id', (req,res) => {
         },
         attributes: [
             'id',
-            'user_id',
-            'plantType_id'
+            'user_id'
+        ],
+        include: [
+            {
+                model: User,
+                attributes: ['id']
+            },
+            {
+                model: PlantType,
+                attributes: ['id', 'name', 'waterAmount', 'sunlightAmount'],
+                include: {
+                    model: PlantCategory,
+                    attributes: ['category']
+                }
+            }
         ]
     })
     .then(dbPlantData => {
@@ -99,7 +112,7 @@ router.post('/userPlant', (req,res) => {
     })
 })
 
-router.put('/:id', (req, res) => {
+/* router.put('/:id', (req, res) => {
     PlantType.update(
         {
             name: req.body.name,
@@ -142,6 +155,6 @@ router.delete('/:id', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
-});
+}); */
 
 module.exports = router;

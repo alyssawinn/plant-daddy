@@ -1,35 +1,24 @@
-/* async function newMyPlantHandler(event) {
-    event.preventDefault();
-
-    //const addedPlant = document.querySelector('card plant-card');
-    console.log("hi");
-
-     const response = await fetch('/api/plants', {
+async function addPlantHandler() {
+    const response = await fetch('/api/userPlant', {
         method: 'POST',
-        body: JSON.stringify({
-            addedPlant
-        }),
+        body: JSON.stringify({}),
         headers: {
             'Content-Type': 'application/json'
         }
     });
-
+    
     if (response.ok) {
         document.location.reload();
     } else {
         alert(response.statusText);
     }
-} */
+}
 
-/* document.addEventListener('click',function(e){
-    if(e.target && e.target.id == 'addButton'){
-          console.log('hi');
-     }
- });
+addPlantHandler();
 
- $(document).on('click','#addButton',function(){
-     console.log('hi');
- }); */
 
- let addButton = document.querySelector('.add-btn');
- addButton.id = "addButton";
+
+
+
+
+

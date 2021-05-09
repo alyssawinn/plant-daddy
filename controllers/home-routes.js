@@ -10,11 +10,15 @@ router.get('/', (req, res) => {
 });
 
 router.get('/search', (req, res) => {
-  res.render('search');
+  res.render('search', {
+    loggedIn: req.session.loggedIn
+  });
 });
 
 router.get('/myplants', (req, res) => {
-  res.render('myplants');
+  res.render('myplants', {
+    loggedIn: req.session.loggedIn
+  });
 })
 
 router.get('/plantType', (req, res) => {
