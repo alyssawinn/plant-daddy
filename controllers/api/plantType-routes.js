@@ -57,8 +57,7 @@ router.get('/userPlant/:id', (req,res) => {
             user_id: req.params.id
         },
         attributes: [
-            'id',
-            'user_id'
+            'id'
         ],
         include: [
             {
@@ -70,7 +69,7 @@ router.get('/userPlant/:id', (req,res) => {
                 attributes: ['id', 'name', 'waterAmount', 'sunlightAmount'],
                 include: {
                     model: PlantCategory,
-                    attributes: ['category']
+                    attributes: ['id', 'category']
                 }
             }
         ]
