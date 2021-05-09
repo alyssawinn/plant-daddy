@@ -3,7 +3,9 @@ const sequelize = require('../config/connection');
 const { User, PlantType, PlantCategory } = require('../models');
 
 router.get('/', (req, res) => {
-  res.render('homepage');
+  res.render('homepage', {
+    loggedIn: req.session.loggedIn
+  });
 });
 
 router.get('/search', (req, res) => {
@@ -102,9 +104,10 @@ router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
+  } else {
+    res.render('login');
   }
-
-  res.render('login');
+  
 });
 
 module.exports = router;
