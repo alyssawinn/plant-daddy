@@ -13,6 +13,10 @@ router.get('/search', (req, res) => {
   res.render('search');
 });
 
+router.get('/myplants', (req, res) => {
+  res.render('myplants');
+})
+
 router.get('/plantType', (req, res) => {
   PlantType.findAll({
     attributes: [
@@ -105,9 +109,10 @@ router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
+  } else {
+    res.render('login');
   }
-
-  res.render('login');
+  
 });
 
 module.exports = router;

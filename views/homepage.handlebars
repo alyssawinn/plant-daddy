@@ -4,7 +4,7 @@
       <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 signup-head">
         {{#if loggedIn}}
         <div class="loggedin-homepage">
-          <h1>Welcome, {{firstname}}</h1>
+          <h1>Welcome, {{user.firstname}}</h1>
         </div>
         {{else}}
         <div class="signup-section">
@@ -29,4 +29,8 @@
 </section>
 
 
+{{#if loggedIn}}
+
+{{else}}
 <script src="/javascript/signup.js"></script>
+{{/if}}

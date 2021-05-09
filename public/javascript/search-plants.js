@@ -13,6 +13,7 @@ async function searchFormHandler(event) {
 
 
     if (!(selectedCategory === "") || !(selectedName === "")) {
+        let initialSearch = true;
         const response = await fetch(`/api/plantType/`, {
             method: 'GET',
             headers: {
