@@ -99,7 +99,7 @@ router.post('/userPlant', (req,res) => {
     })
 })
 
-router.put('/:id', (req, res) => {
+/* router.put('/:id', (req, res) => {
     PlantType.update(
         {
             name: req.body.name,
@@ -142,6 +142,6 @@ router.delete('/:id', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
-});
+}); */
 
 module.exports = router;
