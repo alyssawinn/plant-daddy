@@ -12,6 +12,10 @@ router.get('/search', (req, res) => {
   res.render('search');
 });
 
+router.get('/myplants', (req, res) => {
+  res.render('myplants');
+})
+
 router.get('/plantType', (req, res) => {
   PlantType.findAll({
     attributes: [
