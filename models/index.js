@@ -18,7 +18,11 @@ User.belongsToMany(PlantType, {
 
 PlantType.belongsToMany(User, {
     through: Plant, 
-    foreignKey: 'plant_id'
+    foreignKey: 'plantType_id'
+});
+
+Plant.belongsTo(PlantType, {
+    foreignKey: 'plantType_id'
 });
 
 PlantType.belongsTo(PlantCategory, {

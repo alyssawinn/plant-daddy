@@ -7,8 +7,9 @@ PlantType.init(
     {
         id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             primaryKey: true,
-            autoIncrememnt: true
+            autoIncrememnt: true,
         },
         name: {
             type: DataTypes.STRING,
