@@ -48,13 +48,12 @@ router.post('/', (req,res) => {
    User.create({
       firstname: req.body.firstname,
       email: req.body.email,
-      password: req.body.password,
+      password: req.body.password
    })
       .then(dbUserData => {
          req.session.save(() => {
             req.session.user_id = dbUserData.id;
             req.session.firstname = dbUserData.firstname;
-            req.session.admin = false;
             req.session.loggedIn = true;
             
             res.json(dbUserData);
