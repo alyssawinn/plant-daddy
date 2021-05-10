@@ -15,7 +15,7 @@ router.get('/search', (req, res) => {
   });
 });
 
-router.get('/myplants', (req, res) => {
+router.get('/myplants/', (req, res) => {
   res.render('myplants', {
     loggedIn: req.session.loggedIn
   });
