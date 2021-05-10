@@ -1,14 +1,17 @@
 async function addPlantHandler() {
-    const response = await fetch('/api/plantType/userPlant/', {
+    const response = await fetch(`/api/plantType/userPlant/`, {
         method: 'POST',
-        body: JSON.stringify({}),
+        body: JSON.stringify({
+            user_id,
+            plantType_id
+        }),
         headers: {
             'Content-Type': 'application/json'
         }
     });
     
     if (response.ok) {
-        //do nothing
+        document.location.replace('/');
     } else {
         alert(response.statusText);
     }
