@@ -1,5 +1,5 @@
 async function addPlantHandler() {
-    const response = await fetch('/api/userPlant', {
+    const response = await fetch('/api/plantType/userPlant/', {
         method: 'POST',
         body: JSON.stringify({}),
         headers: {
@@ -8,10 +8,11 @@ async function addPlantHandler() {
     });
     
     if (response.ok) {
-        document.location.reload();
+        //do nothing
     } else {
         alert(response.statusText);
     }
+
 }
 
 addPlantHandler();
