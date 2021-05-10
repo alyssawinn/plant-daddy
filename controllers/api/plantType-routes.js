@@ -66,7 +66,7 @@ router.get('/userPlant/:id', (req,res) => {
             },
             {
                 model: PlantType,
-                attributes: ['id', 'name', 'waterAmount', 'sunlightAmount'],
+                attributes: ['id', 'name', 'waterAmount', 'sunlightAmount', 'image_url'],
                 include: {
                     model: PlantCategory,
                     attributes: ['id', 'category']
@@ -92,7 +92,8 @@ router.post('/', (req, res) => {
         name: req.body.name,
         waterAmount: req.body.waterAmount,
         sunlightAmount: req.body.sunlightAmount,
-        category_id: req.body.category_id
+        category_id: req.body.category_id,
+        image_url: req.body.image_url
     })
     .then(dbPlantTypeData => res.json(dbPlantTypeData))
         .catch(err => {
@@ -112,50 +113,4 @@ router.post('/userPlant', (req,res) => {
         res.status(500).json(err);
     })
 })
-
-/* router.put('/:id', (req, res) => {
-    PlantType.update(
-        {
-            name: req.body.name,
-            waterAmount: req.body.waterAmount,
-            sunlightAmount: req.body.sunlightAmount
-        },
-    {
-        where: {
-            id: req.params.id
-        }
-    }
-    )
-    .then(dbPlantTypeData => {
-        if (!dbPlantTypeData) {
-            res.status(404).json({ message: 'no post found with this id '});
-            return;
-        }
-        res.json(dbPlantTypeData); 
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
-});
-
-router.delete('/:id', (req, res) => {
-    PlantType.destroy({
-        where: {
-            id: req.params.id
-        }
-    })
-    .then(dbPlantTypeData => {
-        if (!dbPlantTypeData) {
-            res.status(404).json({ message: 'No plant found with this id'});
-            return;
-        }
-        res.json(dbPlantTypeData);
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
-}); */
-
 module.exports = router;
