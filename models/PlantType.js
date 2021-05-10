@@ -30,16 +30,12 @@ PlantType.init(
                 key: 'id'
             }
         },
-        image_url: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
-        underscored: true,
+        /* underscored: true, */
         modelName: 'plantType'
     }
 );
